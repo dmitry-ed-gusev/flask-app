@@ -39,3 +39,34 @@ Based on the guides:
 ```
 
 ## Dockerizing Application
+
+```bash
+    # build docker image with the specified name
+    docker build -t flask-app .
+
+    # view docker image history
+    docker image history flask-app
+
+    # run new container with docker (interactive mode)
+    docker run --name flask-app-container flask-app
+    # run new container with docker (background mode)
+    docker run -d  --name flask-app-container flask-app
+
+    # start existing stopped(!) container
+    docker start flask-app-container
+    # stop existing started(!) container
+    docker stop flask-app-container
+
+    # open a shell inside a running(!) container
+    docker exec -it flask-app-container sh
+
+    # remove stopped(!) container
+    docker rm flask-app-container
+
+    # run the service via docker-compose
+    docker-compose up
+    # run the service in the background
+    docker compose up -d
+    # run the service with rebuild
+    docker compose up --build
+```
