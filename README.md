@@ -4,7 +4,7 @@ Based on the guides:
 
 - [Mega Flask Book (2018)](https://habr.com/ru/articles/346306/)
 - [Mega Flask Book (2024)](https://habr.com/ru/articles/804245/)
-- [Dockerizing flask app](https://testdriven.io/blog/dockerizing-flask-with-postgres-gunicorn-and-nginx/)
+- [Dockerize flask app](https://testdriven.io/blog/dockerizing-flask-with-postgres-gunicorn-and-nginx/)
 
 ## Environment Setup
 
@@ -36,9 +36,12 @@ Based on the guides:
 
     # run development server
     (.venv-flask) $ flask run
+
+    # run dev server with specified .env file (package python-dotenv should be installed)
+    (.venv-flask) $ flask --env-file .env.dev run
 ```
 
-## Dockerizing Application
+## Dockerize Application
 
 ```bash
     # build docker image with the specified name
