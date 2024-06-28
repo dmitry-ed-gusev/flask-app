@@ -9,6 +9,11 @@ def root():
     return "Hello, World!<br>ROOT PAGE!<br>NAME=" + app.config['NAME']
 
 
+@app.route('/about')
+def about():
+    return 'This is about page!'
+
+
 @app.route('/index')
 def index():
     user = {'username': 'Miguel'}
@@ -30,3 +35,8 @@ def index():
 @app.route('/api/v1/alert', methods=['POST'])
 def alert_v1():
     return "Alert received!"
+
+
+@app.route('/user/<username>')
+def show_user_name(username):
+    return f"User: {username}"
