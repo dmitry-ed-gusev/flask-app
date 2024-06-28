@@ -1,6 +1,12 @@
+<!-- cspell:ignore flaskenv -->
+
 # Simple Flask Application
 
-Based on the guides:
+[TOC]
+
+## Useful Tech Articles/Links
+
+This application is based on the guides:
 
 - [Mega Flask Book (2018)](https://habr.com/ru/articles/346306/)
 - [Mega Flask Book (2024)](https://habr.com/ru/articles/804245/)
@@ -9,7 +15,6 @@ Based on the guides:
 ## Environment Setup
 
 ```bash
-
     # 1. create virtual environment
     python -m venv .venv --prompt .venv-flask
     source .venv/Scripts/activate
@@ -25,6 +30,9 @@ Based on the guides:
 
     # 3b. install dependencies from file
     (.venv-flask) $ pip install -r requirements.txt
+
+    # 3c. update/upgrade dependencies from requirements.txt file
+    (.venv-flask) pip install --upgrade --force-reinstall --no-cache-dir -r requirements.txt
 ```
 
 ## Run Development Server
